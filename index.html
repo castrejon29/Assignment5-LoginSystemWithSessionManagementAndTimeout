@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2; url=login.php">
+    <title>Login System - Redirecting...</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .redirect-container {
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 30px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        
+        p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        a {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        
+        a:hover {
+            transform: translateY(-2px);
+        }
+        
+        .info-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 5px;
+            font-size: 14px;
+            text-align: left;
+        }
+        
+        .info-box strong {
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-container">
+        <div class="loading-spinner"></div>
+        <h1>🔐 Login System</h1>
+        <p>Redirecting to login page...</p>
+        <p>If you are not redirected automatically, click the button below:</p>
+        <a href="login.php">Go to Login</a>
+        
+        <div class="info-box">
+            <strong>Assignment 5: Login System with Session Management</strong>
+            Features:
+            <ul style="margin-top: 10px; margin-left: 20px;">
+                <li>Secure authentication with bcrypt password hashing</li>
+                <li>Session management with 60-second auto-timeout</li>
+                <li>Real-time countdown timer</li>
+                <li>Protected admin dashboard</li>
+                <li>SQL injection and XSS protection</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // Backup redirect in case meta refresh fails
+        setTimeout(function() {
+            window.location.href = 'login.php';
+        }, 2000);
+    </script>
+</body>
+</html>
